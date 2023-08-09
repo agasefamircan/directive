@@ -91,6 +91,6 @@ export class AppComponent {
   ];
 
   pageIndex(index: number) {
-    return this.currentPage - index<5;
+    return Math.abs(this.currentPage - index)<5;
   }
 }
