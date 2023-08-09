@@ -25,7 +25,15 @@
   </nav>
 
   <div>
-    <h4>{{ images[currentPage].title }}</h4>
+    <h4 appFirst>{{ images[currentPage].title }}</h4>
     <img [src]="images[currentPage].url" alt="" />
+  </div>
+  <div [ngSwitch]="currentPage">
+    <div *ngSwitchCase="0">
+        First Page
+      </div>
+    <div *ngSwitchDefault>
+        Not first Page 
+      </div>
   </div>
 </div>
